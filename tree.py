@@ -3,6 +3,7 @@ from bisect import bisect
 import pygraphviz as pgv
 from collections import defaultdict
 
+
 # Definition for a binary tree node.
 class TreeNode(object):
     def __init__(self, x):

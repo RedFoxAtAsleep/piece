@@ -85,22 +85,22 @@ def print_tree(root, dot='TreeExample.dot', png='TreeExample.png'):
         G.write(dot)
 
 
-def search_middle_first(node):
+def search_middle_order(node):
     if not node:
         return []
-    return search_middle_first(node.left)+ [node.val] + search_middle_first(node.right)
+    return search_middle_order(node.left)+ [node.val] + search_middle_order(node.right)
 
 
-def search_pre_first(node):
+def search_pre_order(node):
     if not node:
         return []
-    return [node.val] + search_pre_first(node.left) + search_pre_first(node.right)
+    return [node.val] + search_pre_order(node.left) + search_pre_order(node.right)
 
 
-def search_post_first(node):
+def search_post_order(node):
     if not node:
         return []
-    return search_post_first(node.left) + search_post_first(node.right) + [node.val]
+    return search_post_order(node.left) + search_post_order(node.right) + [node.val]
 
 
 if __name__ == "__main__":
@@ -110,22 +110,23 @@ if __name__ == "__main__":
     # pre_order: root left right
     # post_order: left right left
 
-    middle_ordered = [3, 4, 5, 6, 7, 8, 9, 10, 12, 13, 15]
     preordered = [9, 7, 6, 4, 3, 5, 8, 15, 12, 10, 13]
+    middle_ordered = [3, 4, 5, 6, 7, 8, 9, 10, 12, 13, 15]
+
+    # preordered = [2, 1, 4, 3, 5]
+    # middle_ordered = [1, 2, 3, 4, 5]
+
     root = build_from_middle_pre(middle_ordered, preordered)
     print_tree(root)
-    # middle_ordered = [2, 1, 4, 3, 5]
-    # preordered = [1, 2, 3, 4, 5]
-    # middle_ordered = [5, 4, 3, 2, 1]
-    # preordered = [1, 2, 3, 4, 5]
+
 
     deserialize([3,9,20,None,None,15,7])
     serialized = serialize(root)
     root = deserialize(serialized)
 
-    print(search_middle_first(root))
-    print(search_pre_first(root))
-    print(search_post_first(root))
+    print(search_middle_order(root))
+    print(search_pre_order(root))
+    print(search_post_order(root))
 
 
 

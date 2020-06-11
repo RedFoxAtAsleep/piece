@@ -2,13 +2,20 @@
 
 import setuptools
 
+account = "redfoxatasleep"
+password = "github123456"
+mail = "bbxxone@qq.com"
+token = {
+    "zhjh":"pypi-AgENdGVzdC5weXBpLm9yZwIkMDU5NTA1Y2QtNTM0ZC00OTZjLTkxMDYtMjNiOGViOTRiNTExAAIleyJwZXJtaXNzaW9ucyI6ICJ1c2VyIiwgInZlcnNpb24iOiAxfQAABiDK-r-EQhADC1kicp2zKhWoa27N50PgfgE-sxXCEw_xiA"
+}
+
 with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="piece", # Replace with your own username
+    name="piece",
     version="0.0.1",
-    author="3941",
+    author="redfoxatasleep",
     author_email="bbxxone@qq.com",
     description="Useful Code Piece.",
     long_description=long_description,
@@ -22,3 +29,4 @@ setuptools.setup(
     ],
     python_requires='>=3.4',
 )
+

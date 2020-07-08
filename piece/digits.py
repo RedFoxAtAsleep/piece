@@ -7,7 +7,7 @@ def find_num_of_digits(num, radix):
     return math.ceil(math.log(num + 1, radix))
 
 
-def num2digits(num, radix, num_of_digits, order):
+def num2digits(num, radix, num_of_digits, order="big-endian"):
     # 以radix为基数，数n需要多少位表示
     # 2**4-1 == 15 == 1111 10000 == 16
     necessary_num_of_digits = math.ceil(math.log(num + 1, radix))
@@ -25,7 +25,7 @@ def num2digits(num, radix, num_of_digits, order):
     return digits
 
 
-def digits2num(digits, radix, order):
+def digits2num(digits, radix, order="big-endian"):
     if order == "big-endian":
         digits.reverse()
     '''

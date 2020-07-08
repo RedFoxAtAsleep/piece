@@ -119,7 +119,6 @@ if __name__ == "__main__":
     root = build_from_middle_pre(middle_ordered, preordered)
     print_tree(root)
 
-
     deserialize([3,9,20,None,None,15,7])
     serialized = serialize(root)
     root = deserialize(serialized)

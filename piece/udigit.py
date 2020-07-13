@@ -39,3 +39,6 @@ def digits2num(digits, radix, order="big-endian"):
         num += digit * power
         power *= radix
     return num
+
+
+

@@ -14,7 +14,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="piece3941",
-    version="0.0.3",
+    version="0.0.4",
     author="redfoxatasleep",
     author_email="bbxxone@qq.com",
     description="Useful Code Piece.",
